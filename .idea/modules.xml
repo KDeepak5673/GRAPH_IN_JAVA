@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BFS/BFS.iml" filepath="$PROJECT_DIR$/BFS/BFS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DFS/DFS.iml" filepath="$PROJECT_DIR$/DFS/DFS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA GRAPH.iml" filepath="$PROJECT_DIR$/.idea/JAVA GRAPH.iml" />
       <module fileurl="file://$PROJECT_DIR$/implementGraphWithWeight/implementGraphWithWeight.iml" filepath="$PROJECT_DIR$/implementGraphWithWeight/implementGraphWithWeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/implement_graph/implement_graph.iml" filepath="$PROJECT_DIR$/implement_graph/implement_graph.iml" />
