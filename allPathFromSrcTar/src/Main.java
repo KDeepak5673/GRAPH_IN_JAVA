@@ -40,6 +40,7 @@ public class Main {
         graph[6].add(new Edge(6, 1));
     }
 
+    //O(V^V)
     public static  void printAllPath(ArrayList<Edge>[] graph ,boolean[] vis, int curr , String path , int tar){
 
         if(tar == curr){
