@@ -40,28 +40,33 @@ public class Main {
         graph[6].add(new Edge(6, 1));
     }
 
-    public static void dfs(ArrayList<Edge>[] graph , int curr , boolean[] vis){
-        System.out.print(curr+" ");
-        vis[curr] = true;
+    public static  void printAllPath(ArrayList<Edge>[] graph ,boolean[] vis, int curr , String path , int tar){
 
+        if(tar == curr){
+            System.out.println(path);
+            return;
+        }
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
 
-            if(!vis[curr]) dfs(graph , e.dist , vis);
+            if(!vis[e.dist]){
+                vis[curr] = true;
+                printAllPath(graph , vis , e.dist , path+e.dist , tar);
+                vis[curr] = false;
+            }
         }
     }
+
     public static void main(String[] args) {
         int V = 7;
 
-        ArrayList<Edge>[] graph = new ArrayList[V];
+        ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
 
-        boolean[] vis = new boolean[V];
-        for (int i = 0; i < vis.length; i++) {
-            if(!vis[i]){
-                dfs(graph , i , vis);
-            }
-        }
+
+
+        int src = 0 , tar = 5;
+        printAllPath(graph, new boolean[V], src , "0" , tar);
 
     }
 }
